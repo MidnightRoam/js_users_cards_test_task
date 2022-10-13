@@ -1,0 +1,119 @@
+* {
+    font-family: Arial;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page {
+    background: #FFFFFF;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card__body {
+    width: 350px;
+    height: 250px;
+}
+
+.user__name {
+    font-size: 25px;
+}
+
+.search-img {
+    width: 2%;
+    height: auto;
+}
+
+.button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button a {
+    text-decoration: none;
+    color: #333;
+}
+
+.button a:hover {
+    color: #a3cd5e;
+}
+
+.button a:active {
+    color: #4dcd3b;
+}
+
+.pop_up {
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    z-index: 2;
+}
+
+.pop_up.active {
+    display: block;
+}
+
+.pop_up_container {
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+}
+
+.pop_up_body {
+    margin: auto;
+    width: 500px;
+    background-color: black;
+}
+
+.mg-10 {
+    margin: 10px;
+}
+
+.pd-10 {
+    padding: 10px;
+}
+
+.rounded {
+    border-radius: 1.5em;
+}
+
+.border {
+    border: 2px solid grey;
+}
+
+.shadow {
+    -webkit-box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
+    -moz-box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
+    box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
+}
+
+#search-field {
+    padding: 15px 50px 15px 50px;
+    width: 1250px;
+    margin: 50px;
+    opacity: 0.1;
+}
+
+input.icon{
+    background: url('https://cdn.icon-icons.com/icons2/621/PNG/64/magnifier-1_icon-icons.com_56924.png') no-repeat center right;
+    background-size: 25px;
+    background-origin: content-box;
+}
