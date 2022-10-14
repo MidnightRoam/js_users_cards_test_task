@@ -17,7 +17,7 @@
     width: 70%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -53,35 +53,6 @@
     color: #4dcd3b;
 }
 
-/*.pop_up {*/
-/*    display: none;*/
-/*    align-items: center;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    background-color: rgba(0, 0, 0, 0.5);*/
-/*    margin: auto;*/
-/*    z-index: 2;*/
-/*}*/
-
-/*.pop_up.active {*/
-/*    display: block;*/
-/*}*/
-
-/*.pop_up_container {*/
-/*    margin: 0 auto;*/
-/*    width: 500px;*/
-/*    height: 400px;*/
-/*    background-color: #ffffff;*/
-/*}*/
-
-/*.pop_up_body {*/
-/*    margin: auto;*/
-/*    width: 500px;*/
-/*    background-color: black;*/
-/*}*/
 .modal {
     display: none;
     position: fixed;
@@ -168,15 +139,35 @@
     box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
 }
 
+.search {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #search-field {
     padding: 15px 50px 15px 50px;
-    width: 1250px;
+    width: 100%;
     margin: 50px;
-    opacity: 0.1;
+    opacity: 0.2;
+}
+
+#search-field:focus {
+    color: black;
+    opacity: 0.5;
 }
 
 input.icon{
     background: url('https://cdn.icon-icons.com/icons2/621/PNG/64/magnifier-1_icon-icons.com_56924.png') no-repeat center right;
     background-size: 25px;
     background-origin: content-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.hide {
+    display: none;
 }
