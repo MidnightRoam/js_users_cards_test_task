@@ -1,5 +1,6 @@
 * {
     font-family: Arial;
+    box-sizing: border-box;
 }
 
 .container {
@@ -26,8 +27,25 @@
     height: 250px;
 }
 
+.card__body:hover {
+    -webkit-box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.47);
+    box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.47);
+}
+
 .user__name {
     font-size: 25px;
+    padding: 25px 0px 10px 25px;
+}
+.card__body .user__phone,
+.card__body .user__email {
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+
+.card__body .user__email {
+    text-decoration: underline;
 }
 
 .search-img {
@@ -89,7 +107,7 @@
 .modal__button-close {
     position: absolute;
     top: -20px;
-    left: 220px;
+    left: 205px;
     margin: 0 auto;
     height: 40px;
     width: 40px;
@@ -103,13 +121,6 @@
 
 .modal__button-close:hover {
     background-color: #ff8080;
-}
-
-.modal__button-close:active {
-    left: 221px;
-    height: 38px;
-    width: 38px;
-    font-size: 12px;
 }
 
 .stop-scrolling {
@@ -134,9 +145,9 @@
 }
 
 .shadow {
-    -webkit-box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
-    -moz-box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
-    box-shadow: -1px 2px 24px 12px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.06);
+    box-shadow: 0px 6px 47px 0px rgba(0,0,0,0.06);
 }
 
 .search {
@@ -147,7 +158,7 @@
 }
 
 #search-field {
-    padding: 15px 50px 15px 50px;
+    padding: 20px 50px 20px 50px;
     width: 100%;
     margin: 50px;
     opacity: 0.2;
@@ -162,6 +173,12 @@ input.icon{
     background: url('https://cdn.icon-icons.com/icons2/621/PNG/64/magnifier-1_icon-icons.com_56924.png') no-repeat center right;
     background-size: 25px;
     background-origin: content-box;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin: 0px 15px 0px 0px;
 }
 
 ul {

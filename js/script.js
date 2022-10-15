@@ -11,10 +11,19 @@ async function getUsers() {
             <ul class="ul">
                 <li>
                     <div class="card__body rounded shadow">
-                        <div class="user__name pd-10">${content[key].name}</div>
+                        <div class="user__name">${content[key].name}</div>
                         <div class="user__info pd-10">
-                        <div class="user__phone">${content[key].phone}</div>
-                        <div class="user__email">${content[key].email}</div>
+                        <div class="user__phone pd-10">
+                        <img 
+                        class='icon' 
+                        src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/344/external-phone-essentials-icongeek26-outline-gradient-icongeek26.png" 
+                        alt="phone">${content[key].phone}
+                        </div>
+                        <div class="user__email pd-10">
+                        <img class='icon' 
+                        src="https://img.icons8.com/external-bearicons-gradient-bearicons/344/external-Email-email-bearicons-gradient-bearicons.png" 
+                        alt="email">${content[key].email}
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -28,8 +37,8 @@ console.log(getUsers());
 const modalEl = document.querySelector('.modal');
 
 // Функционал открытия модального окна и получения данных пользователей
-async function openModal(id) {
-    console.log(id)
+async function openModal(user_name) {
+    console.log(user_name)
     let response = await fetch(`http://127.0.0.1:3000`);
     let content = await response.json();
 
@@ -37,24 +46,23 @@ async function openModal(id) {
     modalEl.classList.add('modal--show');
     document.body.classList.add("stop-scrolling");
 
-        modalEl.innerHTML = `
-        <div class="modal__card rounded">
-            <button type="button" class="modal__button-close">&#10006;</button>
-            <div class="user__name"></div>
-            <div class="user__phone">Телефон: </div>
-            <div class="user__email">Почта: </div>
-            <div class="user__date">Дата приема: </div>
-            <div class="user__position-name">Должность: </div>
-            <div class="user__department">Подразделение: </div>
-            <div class="card__info">
-                <p><b>Дополнительная информация:</b></p>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aperiam assumenda delectus 
-                distinctio harum neque numquam porro repudiandae sed? Eos numquam porro provident recusandae!
-                </p>
-            </div>
-        </div>   
-
+    modalEl.innerHTML = `
+    <div class="modal__card rounded">
+        <button type="button" class="modal__button-close">&#10006;</button>
+        <div class="user__name">${user_name.name}</div>
+        <div class="user__phone">Телефон: </div>
+        <div class="user__email">Почта: </div>
+        <div class="user__date">Дата приема: </div>
+        <div class="user__position-name">Должность: </div>
+        <div class="user__department">Подразделение: </div>
+        <div class="card__info">
+            <p><b>Дополнительная информация:</b></p>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aperiam assumenda delectus 
+            distinctio harum neque numquam porro repudiandae sed? Eos numquam porro provident recusandae!
+            </p>
+        </div>
+    </div>   
     `
     const btnClose = document.querySelector(".modal__button-close")
     btnClose.addEventListener("click", () => closeModal());
