@@ -23,8 +23,8 @@
 }
 
 .card__body {
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
 }
 
 .card__body:hover {
@@ -35,13 +35,40 @@
 
 .user__name {
     font-size: 25px;
-    padding: 25px 0px 10px 25px;
+    padding: 25px 0px 25px 25px;
 }
 .card__body .user__phone,
 .card__body .user__email {
     display: flex;
     align-items: center;
     color: grey;
+}
+
+.modal__user-name {
+    font-size: 28px;
+    margin: 30px 0px 25px 10px;
+}
+
+.modal__user-phone, .modal__user-email, .modal__user-date,
+.modal__user-position-name, .modal__user-department {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+.li__main {
+    margin-right: 3em;
+}
+
+.li__secondary {
+    color: grey;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
 }
 
 .card__body .user__email {
@@ -93,8 +120,8 @@
 .modal__card {
     background-color: #ffffff;
     max-width: 600px;
-    width: 450px;
-    height: 350px;
+    width: 550px;
+    height: 450px;
     padding: 16px;
     margin-bottom: 300px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
@@ -107,7 +134,7 @@
 .modal__button-close {
     position: absolute;
     top: -20px;
-    left: 205px;
+    left: 252px;
     margin: 0 auto;
     height: 40px;
     width: 40px;
@@ -123,6 +150,17 @@
     background-color: #ff8080;
 }
 
+.info__title {
+    margin: 20px 0px 15px 0px;
+}
+
+
+.info__text {
+    font-size: 12px;
+    color: grey;
+    text-align: justify;
+}
+
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -130,6 +168,10 @@
 
 .mg-10 {
     margin: 10px;
+}
+
+.mg-5 {
+    margin: 5px;
 }
 
 .pd-10 {
