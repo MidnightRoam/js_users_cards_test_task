@@ -76,11 +76,11 @@ function openModal(obj) {
                 <div class="modal__user-name"><b>${user.name}</b></div>
                 <ul class="modal__user-phone">
                     <li class="li__main"><b>Телефон:</b></li>
-                    <li class="li__secondary">${user.phone}</li>
+                    <li class="li__secondary underline">${user.phone}</li>
                 </ul>
                 <ul class="modal__user-email">
                     <li class="li__main"><b>Почта:</b></li> 
-                    <li class="li__secondary">${user.email}</li>
+                    <li class="li__secondary underline">${user.email}</li>
                 </ul>
                 <ul class="modal__user-date">
                     <li class="li__main"><b>Дата приема:</b></li>
@@ -88,7 +88,7 @@ function openModal(obj) {
                 </ul>
                 <ul class="modal__user-position-name">
                     <li class="li__main"><b>Должность:</b></li>
-                    <li class="li__secondary">${user.position_name}}</li>
+                    <li class="li__secondary">${user.position_name}}</li>             
                 </ul>
                 <ul class="modal__user-department">
                     <li class="li__main"><b>Подразделение:</b></li>
